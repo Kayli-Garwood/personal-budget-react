@@ -1,0 +1,47 @@
+{
+    "myBudget": [
+    {
+        "title": "Eat out",
+        "budget": 25
+    },
+    {
+        "title": "Rent",
+        "budget": 375
+    },
+    {
+        "title": "Grocery",
+        "budget": 110
+    },
+    {
+        "title": "Utilities",
+        "budget": 170
+    },
+    {
+        "title": "Phone bill",
+        "budget": 120
+    },
+    {
+        "title": "Insurance",
+        "budget": 200
+    },
+    {
+        "title": "Emergency Fund",
+        "budget": 400
+    },
+    {
+        "title": "Bank Account Fees",
+        "budget": 30
+    },
+    {
+        "title": "Prescriptions",
+        "budget": 100
+    },
+    {
+        "title": "Gas",
+        "budget": 150
+    },
+    {
+        "title": "Internet",
+        "budget": 60
+    }]
+}
