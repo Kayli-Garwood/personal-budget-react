@@ -43,12 +43,13 @@ function getBudget() {
         createChart();
     });
 }
-getBudget();
+
 
 
 
 
 function HomePage() {
+    getBudget();
   return (
     <main className="center" id="main">
 
