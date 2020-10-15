@@ -1,55 +1,7 @@
 import React from 'react';
-import axios from 'axios';
-import Chart from 'chart.js';
-
-var dataSource = {
-    datasets: [
-        {
-            data: [],
-            backgroundColor: [
-                '#ff3333',
-                '#ff9f33',
-                '#fff833',
-                '#87ff33',
-                '#33fdff',
-                '#3354ff',
-                '#ac33ff',
-                '#fc33ff',
-                '#ff3386',
-                '#34ffad',
-                '#33bdff',
-            ],
-        },
-    ],
-    labels: []
-};
-
-function createChart() {
-    var ctx = document.getElementById("myChart").getContext("2d");
-    var myPieChart = new Chart(ctx, {
-        type: 'pie',
-        data: dataSource
-    });
-}
-
-function getBudget() {
-    axios.get('http://localhost:5000/budget')
-    .then(function (res) {
-        console.log(res.data);
-        for (var i = 0; i < res.data.myBudget.length; i++){
-            dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-            dataSource.labels[i] = res.data.myBudget[i].title;
-        }
-        createChart();
-    });
-}
-
-
-
-
+import ChartData from '../ChartData/ChartData';
 
 function HomePage() {
-    getBudget();
   return (
     <main className="center" id="main">
 
@@ -114,9 +66,7 @@ function HomePage() {
     
             <div className="text-box">
                 <h1>Chart</h1>
-                <p>
-                    <canvas id="myChart" width="400" height="400"></canvas>
-                </p>
+                    <ChartData/>
             </div>
 
         </div>
